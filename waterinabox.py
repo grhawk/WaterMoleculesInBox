@@ -2,9 +2,11 @@
 import sys
 from PyQt4 import QtGui, QtCore, uic
 from PyQt4.QtGui import QMessageBox
-import signal
+import signal, os
 
-form_class = uic.loadUiType("waterinabox.ui")[0]
+real_path = os.path.dirname(os.path.realpath(__file__))
+
+form_class = uic.loadUiType(os.path.join(real_path,"./waterinabox.ui"))[0]
 
 molPerAngc = 0.033456
 
